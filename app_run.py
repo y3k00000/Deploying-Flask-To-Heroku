@@ -8,9 +8,7 @@ app = Flask(__name__)
 def index():
     strToConvert = request.args.get("str")
     strToConvert = urllib.parse.unquote_plus(strToConvert)
-    print(strToConvert)
     strToConvert = pinyin(strToConvert,style=Style.BOPOMOFO)
-    print(strToConvert)
     converted = [item[0] for item in strToConvert]
     converted = " ".join(converted)
     print(converted)
