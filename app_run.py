@@ -9,7 +9,7 @@ def index():
     strToConvert = request.args.get("str")
     strToConvert = urllib.parse.unquote_plus(strToConvert)
     converted = pinyin(strToConvert,style=Style.BOPOMOFO)
-    converted = [item[0] for item in strToConvert]
+    converted = [item[0] for item in converted]
     converted = " ".join(converted)
     return converted
 
