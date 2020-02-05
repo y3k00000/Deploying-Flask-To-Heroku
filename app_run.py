@@ -11,10 +11,10 @@ def index():
     print(strToConvert)
     strToConvert = pinyin(strToConvert,style=Style.BOPOMOFO)
     print(strToConvert)
-    stringToConvert = [item[0] for item in stringToConvert]
-    strToConvert = " ".join(strToConvert)
-    print(strToConvert)
-    return strToConvert
+    converted = [item[0] for item in stringToConvert]
+    converted = " ".join(converted)
+    print(converted)
+    return converted
 
 if __name__ == '__main__':
     app.run(debug=True)
