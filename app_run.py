@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/pinyin')
 def index():
     strToConvert = request.args.get("str")
-    strToConvert = urllib.parse.unquote_plus(str)
+    strToConvert = urllib.parse.unquote_plus(strToConvert)
     print(strToConvert)
-    strToConvert = pinyin(str,style=Style.BOPOMOFO)
-    strToConvert = "".join(,strToConvert)
+    strToConvert = pinyin(strToConvert,style=Style.BOPOMOFO)
+    strToConvert = "".join(str,strToConvert)
     print(strToConvert)
     return strToConvert
 
