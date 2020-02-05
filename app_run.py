@@ -8,10 +8,8 @@ app = Flask(__name__)
 def index():
     str = request.args.get("str")
     str = urllib.parse.unquote_plus(str)+""
-    print(str)
     str = pinyin(str,style=Style.BOPOMOFO)
-    print(str)
-    return "result = "
+    return "".join(str)
 
 
 if __name__ == '__main__':
