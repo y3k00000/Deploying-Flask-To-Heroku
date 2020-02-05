@@ -11,6 +11,7 @@ def index():
     print(strToConvert)
     strToConvert = pinyin(strToConvert,style=Style.BOPOMOFO)
     print(strToConvert)
+    stringToConvert = [item[0] for item in stringToConvert]
     strToConvert = " ".join(strToConvert)
     print(strToConvert)
     return strToConvert
