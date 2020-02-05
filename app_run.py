@@ -9,7 +9,9 @@ def index():
     str = request.args.get("str")
     str = urllib.parse.unquote_plus(str)+""
     str = pinyin(str,style=Style.BOPOMOFO)
-    return "".join(str)
+    str = "".join(str)
+    print(str)
+    return str
 
 
 if __name__ == '__main__':
