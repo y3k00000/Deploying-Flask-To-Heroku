@@ -6,12 +6,13 @@ app = Flask(__name__)
 
 @app.route('/pinyin')
 def index():
-    str = request.args.get("str")
-    str = urllib.parse.unquote_plus(str)+""
-    str = pinyin(str,style=Style.BOPOMOFO)
-    str = "".join(str)
-    print(str)
-    return str
+    strToConvert = request.args.get("str")
+    strToConvert = urllib.parse.unquote_plus(str)
+    print(strToConvert)
+    strToConvert = pinyin(str,style=Style.BOPOMOFO)
+    strToConvert = "".join(,strToConvert)
+    print(strToConvert)
+    return strToConvert
 
 
 if __name__ == '__main__':
