@@ -4,7 +4,7 @@ from pypinyin import pinyin, lazy_pinyin, Style
 app = Flask(__name__)
 
 @app.route('/pinyin')
-def index(any):
+def index():
     str = request.args.get("str")
     return "result = "+pinyin(str,style=Style.BOPOMOFO)
 
