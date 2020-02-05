@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/pinyin')
 def index():
     str = request.args.get("str")
-    str = urllib.parse.unquote(str)
+    str = urllib.parse.unquote_plus(str)+""
     return "result = "+pinyin(str,style=Style.BOPOMOFO)
 
 
