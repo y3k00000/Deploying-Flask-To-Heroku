@@ -3,10 +3,10 @@ from pypinyin import pinyin, lazy_pinyin, Style
 
 app = Flask(__name__)
 
-@app.route('/<path:any>')
+@app.route('/pinyin')
 def index(any):
     str = request.args.get("str")
-    return "Hello World!! "+str
+    return "result = "+pinyin(str,style=Style.BOPOMOFO)
 
 
 if __name__ == '__main__':
