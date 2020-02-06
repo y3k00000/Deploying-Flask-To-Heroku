@@ -10,7 +10,7 @@ def index():
     strToConvert = request.args.get("str")
     strToConvert = urllib.parse.unquote_plus(strToConvert)
     converted = pinyin(strToConvert,style=Style.BOPOMOFO)
-    converted = json.dump(converted)
+    converted = json.dumps(converted)
 #     converted = [item[0] for item in converted]
 #     converted = " ".join(converted)
     return converted
